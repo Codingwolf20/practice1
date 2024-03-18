@@ -2,28 +2,17 @@ import kivy
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.gridlayout  import GridLayout
+from kivy.uix.floatlayout  import FloatLayout
 from kivy.core.window import Window
 
+class Flatlayout(FloatLayout):
 
-
-
-test =Builder.load_string("""
-# Label:
-#     text: "developer"
-#     font_size: '20'
-#     markup:True
-#     color: 1 , 1, 0
-    
-""")
-class MainLayout(GridLayout):
     pass
 
-class Tesst(App):
+class Flat(App):
     def build(self):
         Window.size=[300,600]
-        return MainLayout()
-
-
+        return Flatlayout()
 
 if __name__=="__main__":
-    Tesst().run()        
+    Flat().run()        
